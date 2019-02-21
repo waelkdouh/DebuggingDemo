@@ -1,0 +1,144 @@
+Start by adding the following code:
+-----------------------------------
+
+static void Main(string[] args)
+{
+	int i = 10;
+	i++;
+	i++;
+	i++;
+	Foo();
+	Console.WriteLine("Hello World!");
+}
+
+private static void Foo()
+{
+	Bar();
+}
+
+private static void Bar()
+{
+	string s = "!";
+	int z = 42;
+}
+
+Demonstrate the step in, step out, Autos, locals, watch, and call stack:
+------------------------------------------------------------------------
+Put a breakpoint at the second i++;
+
+Show the difference between stepping in and out of Foo();
+
+Show how you can drag and drop the play head. For example if you stpeed out or over something but changed your mind. Mention that the state is retained when you drag the play head.
+
+Demo Autos, Locals, Watch, and call stack. 
+
+Mention that "Autos" is a subset of locals. It shows what is on the current and previuos line. Locals shows every variable in scope.
+
+Watch allows us to watch a variable even if its not in scope.
+
+Show how you can double click on the stack entry to take you to the location in the code where the call was made.
+
+Demonstrate "Edit and Continue" and the Immediate Window:
+---------------------------------------------------------
+Immediate window provides us with almost a scripting language which would allow us to talk to variables, modify the variables, and basically interact with the state of our program.
+
+Edit and continue allows you to edit and continue debugging. Its not intuitive as you have to be in debugging mode. 
+Modify the Main method as follows and show how edit and continue won't work when you are waiting for a key entry on the console:
+static void Main(string[] args)
+{
+	int i = 10;
+	i++;
+	i++;
+	i++;
+	Foo();
+	Console.WriteLine("Hello World!");
+	Console.ReadLine();
+	i++;
+	Foo();
+
+}
+
+Add the following method while debugging and show how we can execute it fom the immediate window while running:
+private static int Add(int num1, int num2)
+{
+	return num1 +num2;
+}
+
+Demonstrate "Run execution to here" and the elapsed time:
+---------------------------------------------------------
+
+Place the cursor to the left of the statement. Make sure you are close to the left of the code for the cursor to show up.
+
+Highlight the time that shows up on the right of the statement. Its basically an approximation of how expensive was the previous line to execute. So this gives you an indication on whether this is a lightweight or heavy execution.
+
+
+Demonstrate "Run to cursor" which allows you to debug without a breakpoint
+--------------------------------------------------------------------------
+Right click next to the code and click on Run to cursor.
+
+
+Demosntrate Conditional Debugging:
+----------------------------------
+Add a for loop inside the main method. Add a breakpoint to the beggining of the for loop. Right click on the breakpoint and set a condition. You can break by value or by hit count or filter in the breakpoint condition
+for (int i = 0; i < 5; i++)
+{
+	Console.WriteLine(i);
+}
+
+Demosntrate Object Tracking:
+----------------------------
+Modify the Main method to include the following code:
+object o1 = "test";
+object o2 = o1;
+object o3 = o2;
+
+Under the locals windows right click on o1 and select "Make object id". This will now allow you to see what the different objects are pointing to.
+
+Demonstrate return value by adding the following code to the main method. Look under locals to see the message that says Foo returned 100
+int i = FooBar();
+
+private static int FooBar()
+{
+	return 100;
+}
+
+Demosntrate Exception settings:
+-------------------------------
+Add the following code to the main method
+
+try
+{
+	throw new ArgumentException();
+}
+catch (Exception)
+{
+}
+
+Show how by default the exception is thrown to the output window but debugging doesn't stop. You have to select the checkbox for the System.ArgumentException under the Common Language Runtime Exceptions.
+
+Demosntrate Attaching the debugger to a separate process:
+---------------------------------------------------------
+Maybe you haven't launched the application from Visual Studio but you would still like to attach the debugger.
+
+Modify the main method to include this code and run it in NON debug mode.
+
+Console.ReadKey();
+Console.WriteLine();
+
+Go to the Debug menu and click on Attach to process. Then use the filter and type dotnet. Point out that if we were using the non .net core we would not have the dotnet but instead we would have the console app name running directly.
+
+Finally mention the reattach to process which reattaches to the last process by process id. 
+
+
+Discuss remote debugging:
+-------------------------
+https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2017
+
+Discuss Diagnositics Tools:
+---------------------------
+Uncomment the following code and put a break point at the start and end. Take two memory snapshots and show them the difference. Also show them the cpu usage.
+
+Break when value changes VS 2019:
+---------------------------------
+https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/
+
