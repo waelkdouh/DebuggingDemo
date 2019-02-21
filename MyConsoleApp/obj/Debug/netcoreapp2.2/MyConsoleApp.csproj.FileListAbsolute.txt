@@ -1,0 +1,10 @@
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\bin\Debug\netcoreapp2.2\MyConsoleApp.deps.json
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\bin\Debug\netcoreapp2.2\MyConsoleApp.runtimeconfig.json
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\bin\Debug\netcoreapp2.2\MyConsoleApp.runtimeconfig.dev.json
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\bin\Debug\netcoreapp2.2\MyConsoleApp.dll
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\bin\Debug\netcoreapp2.2\MyConsoleApp.pdb
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\obj\Debug\netcoreapp2.2\MyConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\obj\Debug\netcoreapp2.2\MyConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\obj\Debug\netcoreapp2.2\MyConsoleApp.AssemblyInfo.cs
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\obj\Debug\netcoreapp2.2\MyConsoleApp.dll
+C:\Users\Wael Kdouh\Desktop\DebuggingDemo\MyConsoleApp\obj\Debug\netcoreapp2.2\MyConsoleApp.pdb
